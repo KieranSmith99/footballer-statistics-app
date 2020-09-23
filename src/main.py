@@ -24,15 +24,14 @@ slim_elements_df['team'] = slim_elements_df.team.map(teams_df.set_index('id').na
 
 slim_elements_df['value'] = slim_elements_df.value_season.astype(float)
 
-def select_player_row():
-    userInput = input("Please enter the surname of a footballer: ")
-
-    print(slim_elements_df.loc[slim_elements_df['second_name'] == userInput])
+def select_player_row(userInput):
+    if userInput.isdigit():
+        print("That's a number!")
+    else:
+        print(slim_elements_df.loc[slim_elements_df['second_name'] == userInput])
 
 def high_value_players():
     print(slim_elements_df.sort_values('value',ascending=False).head(10))
 
 def highest_points():
     print(slim_elements_df.sort_values('total_points',ascending=False).head(10))
-
-highest_points()
