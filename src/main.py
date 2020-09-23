@@ -2,6 +2,8 @@ import requests
 import numpy as np
 import pandas as pd
 
+pd.options.mode.chained_assignment = None
+
 url = 'https://fantasy.premierleague.com/api/bootstrap-static/'
 
 r = requests.get(url)
@@ -20,4 +22,17 @@ slim_elements_df['position'] = slim_elements_df.element_type.map(elements_types_
 
 slim_elements_df['team'] = slim_elements_df.team.map(teams_df.set_index('id').name)
 
-print(slim_elements_df.head())
+slim_elements_df['value'] = slim_elements_df.value_season.astype(float)
+
+def select_player_row():
+    userInput = input("Please enter the surname of a footballer: ")
+
+    print(slim_elements_df.loc[slim_elements_df['second_name'] == userInput])
+
+def high_value_players():
+    print(slim_elements_df.sort_values('value',ascending=False).head(10))
+
+def highest_points():
+    print(slim_elements_df.sort_values('total_points',ascending=False).head(10))
+
+highest_points()
