@@ -28,7 +28,8 @@ def select_player_row(userInput):
     if userInput.isdigit():
         print("That's a number!")
     else:
-        print(slim_elements_df.loc[slim_elements_df['second_name'] == userInput])
+        playerRowResult = slim_elements_df.loc[slim_elements_df['second_name'] == userInput]
+        print(playerRowResult)
 
 def high_value_players():
     print(slim_elements_df.sort_values('value',ascending=False).head(10))
