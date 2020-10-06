@@ -32,7 +32,7 @@ def select_player_row(userInput):
         print(playerRowResult)
 
 def high_value_players():
-    print(slim_elements_df.sort_values('value',ascending=False).head(10))
+    print(slim_elements_df.sort_values('value',ascending=False).head(15))
 
 def highest_points():
-    print(slim_elements_df.sort_values('total_points',ascending=False).head(10))
+    print(slim_elements_df.sort_values('total_points',ascending=False).head(15))
