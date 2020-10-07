@@ -2,6 +2,7 @@ from tkinter import *
 from main import select_player_row
 from main import high_value_players
 from main import highest_points
+from main import most_valuable_teams
 
 window = Tk()
 window.geometry("400x400")
@@ -30,5 +31,11 @@ pointsLabel.pack()
 
 pointsButton = Button(window, text="Enter", command=highest_points)
 pointsButton.pack()
+
+teamValueLabel = Label(window, text="Click below to see the highest valued teams!")
+teamValueLabel.pack()
+
+teamValueLabel = Button(window, text="Enter", command=most_valuable_teams)
+teamValueLabel.pack()
 
 window.mainloop()
