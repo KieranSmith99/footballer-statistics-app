@@ -26,6 +26,11 @@ slim_elements_df['value'] = slim_elements_df.value_season.astype(float)
 
 team_pivot = slim_elements_df.pivot_table(index='team',values='value',aggfunc=np.mean).reset_index()
 
+fwd_df = slim_elements_df.loc[slim_elements_df.position == 'Forward']
+mid_df = slim_elements_df.loc[slim_elements_df.position == 'Midfielder']
+def_df = slim_elements_df.loc[slim_elements_df.position == 'Defender']
+goal_df = slim_elements_df.loc[slim_elements_df.position == 'Goalkeeper']
+
 def select_player_row(userInput):
     if userInput.isdigit():
         print("That's a number!")
@@ -41,3 +46,6 @@ def highest_points():
 
 def most_valuable_teams():
     print(team_pivot.sort_values('value',ascending=False))
+
+def high_value_defenders():
+    print(def_df.sort_values('value',ascending=False).head(15))

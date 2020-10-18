@@ -3,6 +3,7 @@ from main import select_player_row
 from main import high_value_players
 from main import highest_points
 from main import most_valuable_teams
+from main import high_value_defenders
 
 window = Tk()
 window.geometry("400x400")
@@ -20,22 +21,16 @@ e.pack()
 submitButton = Button(window, text="Enter", command=lambda: select_player_row(e.get()))
 submitButton.pack()
 
-valueLabel = Label(window, text="Click below to receive the top 15 most value-for-cost players!")
-valueLabel.pack()
-
-valueButton = Button(window, text="Enter", command=high_value_players)
+valueButton = Button(window, text="Click for the highest value-for-money players!", command=high_value_players)
 valueButton.pack()
 
-pointsLabel = Label(window, text="Click below to receive the 15 players with the most points!")
-pointsLabel.pack()
-
-pointsButton = Button(window, text="Enter", command=highest_points)
+pointsButton = Button(window, text="Click to see the 15 players with the most points!", command=highest_points)
 pointsButton.pack()
 
-teamValueLabel = Label(window, text="Click below to see the highest valued teams!")
-teamValueLabel.pack()
+teamValueButton = Button(window, text="Click for the highest value-for-money teams!", command=most_valuable_teams)
+teamValueButton.pack()
 
-teamValueLabel = Button(window, text="Enter", command=most_valuable_teams)
-teamValueLabel.pack()
+defValueButton = Button(window, text="Click for highest value-for-money defenders!", command=high_value_defenders)
+defValueButton.pack()
 
 window.mainloop()
