@@ -48,11 +48,7 @@ def select_player_row(userInput):
         playerLabel.pack()
 
 def high_value_players():
-    global playerLabel
-
-    playerLabel.pack_forget()
-    playerLabel = Label(window, text=slim_elements_df.sort_values('value',ascending=False).head(15).to_string(index=False))
-    playerLabel.pack()
+    return slim_elements_df.sort_values('value',ascending=False).head(15).to_string(index=False)
 
 def highest_points():
     global playerLabel
@@ -75,7 +71,7 @@ def high_value_defenders():
     playerLabel = Label(window, text=def_df.sort_values('value',ascending=False).head(15).to_string(index=False))
     playerLabel.pack()
 
-window.geometry("700x700")
+"""window.geometry("700x700")
 window.title("FPL Statistics")
 
 topLabel = Label(window, text="FPL Stats App")
@@ -102,4 +98,4 @@ teamValueButton.pack()
 defValueButton = Button(window, text="Click for highest value-for-money defenders!", command=high_value_defenders)
 defValueButton.pack()
 
-window.mainloop()
+window.mainloop()"""
