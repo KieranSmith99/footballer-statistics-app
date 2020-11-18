@@ -1,10 +1,10 @@
 {% extends "frontend/base.html" %}
 {% load static %}
 {% block content %}
+    <h2>Player Value</h2>
     <article class="media content-section">
-        <h2>Player Value</h2>
-        <p>
-            {{ high_value_players }}
+        <p class="article-content">
+            <pre>{{ high_value_players }}</pre>
         </p>
     </article>
 {% endblock content %}

@@ -1,4 +1,10 @@
 {% extends "frontend/base.html" %}
+{% load static %}
 {% block content %}
     <h2>Total Points</h2>
+    <article class="media content-section">
+        <p class="article-content">
+            <pre>{{ highest_points }}</pre>
+        </p>
+    </article>
 {% endblock content %}
