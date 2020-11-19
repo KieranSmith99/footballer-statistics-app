@@ -32,10 +32,7 @@ def_df = slim_elements_df.loc[slim_elements_df.position == 'Defender']
 goal_df = slim_elements_df.loc[slim_elements_df.position == 'Goalkeeper']
 
 def select_player_row(userInput):
-    if userInput.isdigit():
-        print("That's a number!")
-    else:
-        return slim_elements_df.loc[slim_elements_df['second_name'] == userInput].to_string(index=False)
+    return slim_elements_df.loc[slim_elements_df['second_name'] == userInput].to_string(index=False)
 
 def high_value_players():
     return slim_elements_df.sort_values('value',ascending=False).head(15).to_string(index=False)

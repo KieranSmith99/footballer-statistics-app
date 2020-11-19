@@ -1,4 +1,18 @@
 {% extends "frontend/base.html" %}
 {% block content %}
-    <h2>Player Search</h2>
+    <h2>Search for a Player</h2>
+    <article class="media content-section">
+        <p class="article-content">
+            <p>Player Surname:</p>
+            <form method="GET">
+                <input type="text" name="searchInput">
+                <div class="form-group">
+                    <button class="btn btn-outline-info" type="submit">
+                        Search
+                    </button>
+                </div>
+            </form>
+        </p>
+    </article>
+    <pre>{{ select_player_row }}</pre>
 {% endblock content %}

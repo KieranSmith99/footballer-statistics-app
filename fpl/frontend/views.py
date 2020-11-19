@@ -19,4 +19,7 @@ def points(request):
     return render(request, 'frontend/points.html', {'highest_points': pointsResult})
 
 def player_search(request):
-    return render(request, 'frontend/player_search.html')
+    inp_value = request.GET.get('searchInput')
+    searchResult = api.select_player_row(inp_value)
+    runFunction = True
+    return render(request, 'frontend/player_search.html', {'select_player_row': searchResult})
