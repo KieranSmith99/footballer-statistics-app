@@ -1,12 +1,14 @@
 {% extends "frontend/base.html" %}
+{% load static %}
 {% block content %}
-    <img src="media/ziyech.jpg" style="margin-left: -420px; margin-top: -30px;" width="409.4" height="272.9">
-    <img src="media/dcl.jpg" style="margin-left: -10px; margin-top: -30px;" width="409.4" height="272.9">
-    <img src="media/fernandes.jpg" style="margin-left: 393px; margin-top: -300px;" width="409.4" height="272.9">
-    <img src="media/son.jpg" style="margin-left: 800px; margin-top: -348px;" width="409.4" height="272.9">
-    <img src="media/trent.jpg" style="margin-left: 1200px; margin-top: -397px;" width="409.4" height="272.9">
+    <link rel="stylesheet" type="text/css" href="{% static 'frontend/main.css' %}">
+    <div class="d-flex">
+        <img class="small-img mr-auto" src="media/ziyech.jpg">
+        <img class="small-img" src="media/fernandes.jpg">
+        <img class="small-img ml-auto" src="media/son.jpg">
+    </div>
 
-    <h2>FPL Statistics</h2>
+    <h2 class="pt-3 pb-2">FPL Statistics</h2>
     <article class="media content-section">
         All Fantasy Premier League data for the current season of the English Premier League.
     </article>
