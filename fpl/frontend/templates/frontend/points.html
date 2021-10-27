@@ -1,11 +1,9 @@
 {% extends "frontend/base.html" %}
 {% load static %}
 {% block content %}
-    <h2>Total Points</h2>
+    <h2 class="pb-2">Total Points</h2>
     <article class="media content-section">
-        <p class="article-content">
-            In this table are the players with the highest points.
-        </p>
+        In this table are the players with the highest points.
     </article>
     <pre>{{ highest_points }}</pre>
 {% endblock content %}

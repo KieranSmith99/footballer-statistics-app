@@ -1,11 +1,9 @@
 {% extends "frontend/base.html" %}
 {% load static %}
 {% block content %}
-    <h2>Player Value</h2>
+    <h2 class="pb-2">Player Value</h2>
     <article class="media content-section">
-        <p class="article-content">
-            In this table are the players with the highest value-for-cost rating. Value is calculated as points / cost.
-        </p>
+        In this table are the players with the highest value-for-cost rating. Value is calculated as points / cost.
     </article>
     <pre>{{ high_value_players }}</pre>
 {% endblock content %}
