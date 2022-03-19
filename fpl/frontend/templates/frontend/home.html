@@ -2,15 +2,13 @@
 {% load static %}
 {% block content %}
     <link rel="stylesheet" type="text/css" href="{% static 'frontend/main.css' %}">
-    <div class="d-flex">
-        <img class="small-img mr-auto" src="media/ziyech.jpg">
-        <img class="small-img" src="media/fernandes.jpg">
-        <img class="small-img" src="media/son.jpg">
-        <img class="small-img" src="media/trent.jpg">
-    </div>
-
-    <h2 class="pt-3 pb-2">FPL Statistics</h2>
-    <article class="media content-section">
-        All Fantasy Premier League data for the current season of the English Premier League.
-    </article>
+    <div class="jumbotron">
+        <h1 class="display-4">FPL Statistics</h1>
+        <p class="lead">All Fantasy Premier League data for the current season of the English Premier League.</p>
+        <hr class="my-4">
+        <p>Click the links above to see any FPL API data.</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </p>
+      </div>
 {% endblock content %}
