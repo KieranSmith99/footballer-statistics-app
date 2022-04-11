@@ -16,7 +16,7 @@ elements_df = pd.DataFrame(myJSON['elements'])
 elements_types_df = pd.DataFrame(myJSON['element_types'])
 teams_df = pd.DataFrame(myJSON['teams'])
 
-slim_elements_df = elements_df[['second_name','team','element_type','selected_by_percent','now_cost','transfers_in','value_season','total_points']]
+slim_elements_df = elements_df[['first_name','second_name','team','element_type','selected_by_percent','now_cost','transfers_in','value_season','total_points']]
 
 slim_elements_df['position'] = slim_elements_df.element_type.map(elements_types_df.set_index('id').singular_name)
 
